@@ -1,6 +1,6 @@
 
 #Задача 10
-"""
+
 n = int(input('Введите количество моет: '))
 count_eagle = 0
 count_tails = 0
@@ -20,7 +20,8 @@ else:
     print('Перевернуть "Решек": ' + str(count_tails))
 
 #Задача 12
-
+i, j = 0, 0
+flag = True
 s = int(input('Введите сумму S: '))
 p = int(input('Введите произведение P: '))
 for i in range(s):
@@ -28,13 +29,15 @@ for i in range(s):
         if s == i + j and p == i * j:
             print('Загаданные числа X и Y: ')
             print(i, j)
+            flag = False
             break
+if flag:
+    print('Не смогла найти числа')
 
 # Задача 14
-"""
-n = int(input())
-i = 0
-    while 2 ** i <= n:
-        print(2 ** i)
-        i += 1
-"""
+
+n = int(input('Введите ограничение N: '))
+l = 0
+while (2 ** l) <= n:
+    print(f'2 в степени {l} = ' + str(2 ** l) + f' < {n}')
+    l += 1
